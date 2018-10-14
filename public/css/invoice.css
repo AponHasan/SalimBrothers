@@ -1,0 +1,65 @@
+body
+{
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+}
+
+/*app css*/
+.portinfo
+{
+	margin-top: 50px;
+	margin-bottom: 30px;
+
+}
+
+.productinfo
+{
+	margin-bottom: 20px;
+}
+
+.productresult
+{
+	margin-bottom: 80px;
+}
+
+.hr
+{
+	width: 100%;
+	background-color: black;
+	height: 3px;
+}
+.hr1
+{
+	 width: 100%;
+	 background-color: black;
+	 height: 1px;
+}
+
+.footer
+{
+	font-weight: bold; 
+	font-size: 18px;
+}
+/*end app css*/
+
+
+/*port css*/
+.addButton
+{
+	margin-bottom: 20px;
+	margin-left: 20px;
+}
+
+/*invoice print css*/
+
+.printc{
+	margin: 0px;
+	padding: 0px;
+}
+.printc label
+{
+	margin: 0px;
+	padding: 0px;
+	font-weight: bold;
+	font-family: initial;
+}
