@@ -43,7 +43,14 @@ class CreateInvoicesTable extends Migration
             $table->string('invoice_gross_weight');
             $table->string('invoice_total_value');
             $table->string('invoice_total_in_word');
-            $table->string('invoice_note')->nullable();;
+            $table->string('invoice_note')->nullable();
+            $table->string('invoice_product_type');
+            $table->string('invoice_brand')->nullable();
+            $table->string('invoice_chassis_no')->nullable();
+            $table->string('invoice_Year_model')->nullable();
+            $table->string('invoice_serial_no')->nullable();
+            $table->string('invoice_machine_model')->nullable();
+
             $table->timestamps();
         });
     }
