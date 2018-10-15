@@ -36,7 +36,6 @@ class CreateInvoicesTable extends Migration
             $table->string('invoice_tin_no')->nullable();;
             $table->date('invoice_dated');
             $table->date('invoice_date_of_issue');
-            $table->string('invoice_description_of_goods');
             $table->string('invoice_quantity');
             $table->string('invoice_freight');
             $table->string('invoice_unit_price');
@@ -47,7 +46,7 @@ class CreateInvoicesTable extends Migration
             $table->string('invoice_product_type');
             $table->string('invoice_brand')->nullable();
             $table->string('invoice_chassis_no')->nullable();
-            $table->string('invoice_Year_model')->nullable();
+            $table->string('invoice_year_model')->nullable();
             $table->string('invoice_serial_no')->nullable();
             $table->string('invoice_machine_model')->nullable();
 
