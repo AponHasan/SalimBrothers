@@ -72,10 +72,13 @@
     </div>
 <div class="printb" align="Right" style="margin-right: 80px;">
     <button style="font-weight: bold;" onclick="myFunction()" id="pbtn" class="btn btn-warning">Print</button>
+    <input class="btn btn-warning" type="button" style="font-weight: bold;" id="getMessage" name="GetMessage" value="Print1" onclick="OpenAlert()"/>
 </div>
 <script>
-    function myFunction() {
+    function OpenAlert(){
+        document.getElementById("getMessage").style.visibility="hidden";
         window.print();
+        location.reload();
     }
 </script>
 @endsection
