@@ -34,13 +34,13 @@
 	    	<input type="number" onkeypress="isInputNumber(event)" name="invoice_quantity" class="inputv qty" id="qtyid" style="width: 70px;">
 	    </div>
 	    <div align="left" class="col-sm-2" style="margin-top: 10px">
-			<input type="text" name="invoice_freight" class="inputv" id="freightid" style="width: 150px;">
+			<input type="number" name="invoice_freight" class="inputv freid" id="freightid" style="width: 150px;">
 	    </div>
 	    <div align="left" class="col-sm-1" style="margin-top: 10px"> 
 			<input type="number" onkeypress="isInputNumber(event)" name="invoice_unit_price" class="inputv unitsprice" id="unitsprice" style="width: 80px;">
 	    </div>
 	    <div align="left" class="col-sm-2" style="margin-top: 10px">
-	    	<input type="text" name="invoice_gross_weight" class="inputv grossw" id="grossw">
+	    	<input type="number" name="invoice_gross_weight" class="inputv grossw" id="grossw">
 	    </div>
 	    <div align="left" class="col-sm-2" style="margin-top: 10px"> 
 	    	<input type="text" name="invoice_total_value" class="inputv totalvalueid" id="totalvalueid"  style="width: 150px;margin-left: 8px;background-color: ghostwhite;">

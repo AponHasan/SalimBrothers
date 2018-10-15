@@ -90,22 +90,23 @@
 	<div id="container"></div>
 </div>
 <script type="text/javascript">
-	$(document).ready(function() {      
+	$(document).ready(function() {
+
     	//calculate product quantity and unit price
          $('#goods_container').on('input','.unitsprice','.qty ',function(){
-
-         		// $('.totalvalueid').attr("value", "0");
          	   var parent = $(this).closest('.row');
-         	   // var selfvalue= $(this).val();
          	   var qt=parent.find('.qty').val();
+             	var pre = parent.find('.freid').val();
+             	console.log(pre);
          	   var up=parent.find('.unitsprice').val();
                console.log(up);
          	   var totalvalueid=parseFloat(qt)* parseFloat(up);
-         	   
-         	   parent.find('.totalvalueid').val(parseFloat(qt)* parseFloat(up));
+
+         	   parent.find('.totalvalueid').val(parseFloat(qt)* parseFloat(up)+ parseFloat(pre));
 
          });
 }); //end document function
+
 
 function isInputNumber(evt){
 	var cha = String.fromCharCode(evt.which);

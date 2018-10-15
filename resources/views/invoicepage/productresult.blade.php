@@ -16,5 +16,6 @@
 	<div class="col-sm-6">
 	    <input type="text" name="invoice_total_in_word" style="width: 385px;margin-top: 10px;">
 	</div>
+
 	
 </div>
