@@ -3,9 +3,16 @@
         <div class="col-sm-3 printc">
             <label >INVOICE OF</label>
         </div>
-        <div class="col-sm-9 printc">
-            : &nbsp;RECONDITIONED USE VEHICLE.
-        </div>
+            @if($invoice[0]->invoice_product_type=='VEHICLE')
+            <div class="col-sm-9 printc">
+                : &nbsp;RECONDITIONED USE VEHICLE.
+             </div>
+                @elseif($invoice[0]->invoice_product_type!='VEHICLE')
+            <div class="col-sm-9 printc">
+                : &nbsp;RECONDITIONED USE MACHINERY.
+            </div>
+            @endif
+
     </div><div class="row">
         <div class="col-sm-3 printc">
             <label >PORT OF LOADING</label>
@@ -53,7 +60,7 @@
         </div>
         <div class="col-sm-9 printc">
             : &nbsp{{$invoice[0]->invoice_lcaf_no_}}.
-            &nbsp;<label >I R C NO</label>: &nbsp;            : &nbsp{{$invoice[0]->invoice_irc_no}}.
+            &nbsp;<label >I R C NO</label>&nbsp;            : &nbsp{{$invoice[0]->invoice_irc_no}}.
 
         </div>
     </div>
@@ -64,7 +71,7 @@
         </div>
         <div class="col-sm-9 printc">
             : &nbsp{{$invoice[0]->invoice_port_of_discharge}}.
- &nbsp; <label >DATED</label>:             : &nbsp{{$invoice[0]->invoice_port_of_discharge}}.
+ &nbsp; <label >DATED</label>             : &nbsp{{$invoice[0]->invoice_port_of_discharge}}.
         </div>
     </div>
 
@@ -74,7 +81,7 @@
         </div>
         <div class="col-sm-9 printc">
             : &nbsp{{$invoice[0]->invoice_latter_of_credit_no}}.
-            . &nbsp;<label >DATE OF ISSUE </label> :             : &nbsp{{$invoice[0]->invoice_date_of_issue}}.
+            . &nbsp;<label >DATE OF ISSUE </label>              : &nbsp{{$invoice[0]->invoice_date_of_issue}}.
 
         </div>
     </div>

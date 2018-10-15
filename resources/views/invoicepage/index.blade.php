@@ -20,10 +20,10 @@
                 <thead>
                 <tr>
                     <th>S. No</th>
+                    <th>Product</th>
                     <th>company</th>
                     <th>Address</th>
                     <th>Date</th>
-                    <th>Description Of Goods</th>
                     <th>Quantity</th>
                     <th>Unit Price</th>
                     <th>Total Value</th>
@@ -38,10 +38,10 @@
                 @foreach ($invoice as $key=>$inv)
                     <tr class="post{{$inv->id}}">
                         <td>{{$key+1}}</td>
+                        <td>{{$inv->invoice_product_type}}</td>
                         <td>{{$inv->invoice_comapny}}</td>
                         <td>{{$inv->invoice_address}}</td>
                         <td>{{$inv->invoice_date}}</td>
-                        <td>{{$inv->invoice_description_of_goods}}</td>
                         <td>{{$inv->invoice_quantity}}</td>
                         <td>{{$inv->invoice_unit_price}}</td>
                         <td>{{$inv->invoice_total_value}}</td>

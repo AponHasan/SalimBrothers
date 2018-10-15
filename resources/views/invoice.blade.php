@@ -115,7 +115,13 @@ function isInputNumber(evt){
 	$('#numberModal').modal('show');
 	}
 }
-
+    function ShowHideDiv() {
+        var ddlms = document.getElementById("ddlms");
+        var vehicle = document.getElementById("vehicle");
+        var machine = document.getElementById("machine");
+        vehicle.style.display = ddlms.value == "VEHICLE" ? "block" : "none";
+        machine.style.display = ddlms.value == "MACHINERY" ? "block" : "none";
+    }
 </script>
 
 @endsection
