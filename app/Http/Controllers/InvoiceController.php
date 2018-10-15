@@ -49,6 +49,20 @@ class InvoiceController extends Controller
         $this->validate($request,[
             'invoice_ref' => 'required',
             'invoice_date' => 'required',
+            'invoice_product_type' => 'required',
+            'invoice_port_of_loading' => 'required',
+            'invoice_port_of_discharge' => 'required',
+            'invoice_country_of_orgin' => 'required',
+            'invoice_shipping_mark' => 'required',
+            'invoice_dated' => 'required',
+            'invoice_date_of_issue' => 'required',
+            'invoice_quantity' => 'required',
+            'invoice_freight' => 'required',
+            'invoice_unit_price' => 'required',
+            'invoice_gross_weight' => 'required',
+            'invoice_total_value' => 'required',
+            'invoice_total_in_word' => 'required',
+            'invoice_brand' => 'required',
         ]);
         $invoice = new Invoice();
         $invoice->invoice_ref = $request->invoice_ref;
@@ -72,13 +86,18 @@ class InvoiceController extends Controller
         $invoice->invoice_tin_no = $request->invoice_tin_no;
         $invoice->invoice_dated = $request->invoice_dated;
         $invoice->invoice_date_of_issue = $request->invoice_date_of_issue;
-        $invoice->invoice_description_of_goods = $request->invoice_description_of_goods;
         $invoice->invoice_quantity = $request->invoice_quantity;
         $invoice->invoice_freight = $request->invoice_freight;
         $invoice->invoice_unit_price = $request->invoice_unit_price;
         $invoice->invoice_gross_weight = $request->invoice_gross_weight;
         $invoice->invoice_total_value = $request->invoice_total_value;
         $invoice->invoice_total_in_word = $request->invoice_total_in_word;
+        $invoice->invoice_product_type = $request->invoice_product_type;
+        $invoice->invoice_chassis_no = $request->invoice_chassis_no;
+        $invoice->invoice_year_model = $request->invoice_year_model;
+        $invoice->invoice_serial_no = $request->invoice_serial_no;
+        $invoice->invoice_machine_model = $request->invoice_machine_model;
+        $invoice->invoice_brand = $request->invoice_brand;
         $invoice->invoice_note = $request->invoice_note;
         $invoice->save();
         return redirect()->route('invoicepage.index')->with('successMsg','Invoice Successfully Saved');
